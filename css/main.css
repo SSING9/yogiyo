@@ -1,0 +1,69 @@
+/*
+
+overflow
+display
+poition > z-index
+padding
+margin
+width, height
+background
+border
+font
+box-sizing
+
+*/
+
+/* body {overflow-y: hidden; overflow-x: hidden;} */
+
+/* 페이지 전체 고정 헤더 */
+#header {position: relative; width: 100vw; z-index: 1;}
+#header .headerWrap {position: fixed; left: 50%; transform: translateX(-50%); width: 1024px;}
+#header h1 {position: absolute; left: 0; top:50px;}
+
+#header #sns {position: absolute; right: 50px; top: 50px;}
+#header #sns .facebook {padding-right: 20px;}
+
+#header #yogiyoApp2 {position: absolute; right: 0; top: 80px; opacity: 0; transform: translate(0,-20%);}
+#header #yogiyoApp2 img {transition: all 0.6s ease-in-out;}
+#header #yogiyoApp2.show {opacity: 1;}
+#header #yogiyoApp2.show img {transform: none;}
+
+#header #dot {position: fixed; right: 20px; top: 50%; transform: scaleY(-50%);}
+#header #dot li a {display: block; margin: 8px; width: 20px; height: 20px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; transition: 0.3s ease;}
+#header #dot li.active a {transform: scale(0.5); box-shadow: 0 0 0 10px rgba(255,255,255,1);}
+
+#header #scrolldown {position: fixed; bottom: 0; left: 50%; transform: translateY(-50%);}
+
+/* 풀페이지 기본 설정 */
+#fullpage > .section {position: static; width: 100%; height: 100vh;}
+#fullpage #fullpageWrap {position: relative; left: 50%; transform: translateX(-50%); width: 1024px; height: 100vh;}
+
+/* 각 섹션 설정*/
+#section1 {background: url(../images/mainimg1.png) center no-repeat fixed; background-size: cover;}
+#section1 .section1Title > img {position: absolute; left: 0; top: 200px;}
+#section1 .yogiyoApp > a {position: absolute; right: 0; bottom: 125px;}
+
+#section2 {background-color: #e12229;}
+#section2 .section2Title > img {position: absolute; left: 0; top: 200px;}
+#section2 .section2Content {position: absolute; left: 0; top : 460px; text-align: left;}
+#section2 .section2Content > p {margin-bottom: 40px; font-size: 15px; font-weight: 200; color: #fff;}
+#section2 .section2Content2 > img {position: absolute; right: 35px; bottom: 90px; width: 480px; height: 385px;}
+
+#section3 {background-color: #e12229;}
+ /* #section3 {background: url(../images/page3img.png) center no-repeat fixed; background-size: cover;} */
+#section3 .section3Title > img {position: absolute; left: 0; top: 200px;}
+#section3 .section3Content {position: absolute; left: 0; top : 460px; text-align: left;}
+#section3 .section3Content > p {font-size: 15px; font-weight: 200; color: #fff;}
+
+#section4 {background-color: #e12229;}
+#section4 .section4Title > img {position: absolute; left: 0; top: 200px;}
+#section4 .section4Content {position: absolute; left: 0; top : 540px; text-align: left;}
+#section4 .section4Content > p {font-size: 15px; font-weight: 200; color: #fff;}
+#section4 .section4Content2 {position: absolute; right: 0; bottom: 40px;}
+
+#section5 .sns {position: absolute; left: 0; top: 200px;}
+#section5 .sns .facebook {margin-right: 20px;}
+#section5 .section5Content {position: absolute; left: 0; top: 300px; text-align: left;}
+#section5 .section5Content > p {font-size: 15px; font-weight: 200; color: #000;}
+#section5 .section5Content > br {line-height: 20px}
+#section5 .section5Content span {font-size: 20px; font-weight: 300; color: #f0001f;}
