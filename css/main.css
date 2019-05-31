@@ -81,3 +81,9 @@ box-sizing
 #section5 .section5Content > p {font-size: 15px; font-weight: 200; color: #000;}
 #section5 .section5Content > br {line-height: 20px}
 #section5 .section5Content span {font-size: 20px; font-weight: 300; color: #f0001f;}
+#section5 .section5Content2 {position: absolute; left: 40%; top: 200px;}
+#section5 .section5Content2 > p {margin-top: 30px; font-size: 20px; font-weight: 400; color: #000;}
+#section5 .section5Content2 > a {position: absolute;}
+#section5 .section5Content2 .link1 {margin-top: 30px;}
+#section5 .section5Content2 .link2 {margin-top: 70px;}
+#section5 .section5Content2 .link3 {margin-top: 110px;}

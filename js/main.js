@@ -44,13 +44,13 @@ $(document).ready(function(){
    $(window).scroll(function(){
       var wScroll = $(this).scrollTop();
 
-      if(wScroll >= content.eq(1).offset().top){
+      if(wScroll >= (content.eq(1).offset().top)-(wScroll/3)){
          $('#yogiyoApp2').fadeIn(300);
       } else {
          $('#yogiyoApp2').fadeOut(300);
       }
 
-      if(wScroll >= content.eq(4).offset().top){
+      if(wScroll >= (content.eq(4).offset().top)-(wScroll/7)){
          $("h1, #sns").fadeOut(250);
       } else{
          $("h1, #sns").fadeIn(300);
@@ -58,11 +58,12 @@ $(document).ready(function(){
    });
 });
 
+/* 탑버튼 */
 $(document).ready(function(){
    $(".topBtns").hide();
    $(window).scroll(function() {
       var wScroll = $(window).scrollTop();
-      if (wScroll >= content.eq(4).offset().top) {
+      if (wScroll >= (content.eq(4).offset().top)-(wScroll/4)){
         $('.topBtns').fadeIn(500);
       } else {
         $('.topBtns').fadeOut(500);
@@ -74,4 +75,28 @@ $(document).ready(function(){
         scrollTop : $(this.hash).offset().top
       }, 700);
     });
+});
+
+/* 마우스 휠 이벤트 */
+
+var scrollEvent = false;
+var count = 0;
+$("html, body").on("mousewheel", function(e){
+   e.preventDefault();
+   var event = e.originalEvent.wheelDelta;
+   var wHeight = $("#section1").height();
+
+   if(event > 1 && scrollEvent == false && count >=1 ){
+      
+      scrollEvent = true;
+      count--;
+      $("html,body").stop().animate({scrollTop:wHeight*count},
+         {duration:800, complete : function(){scrollEvent = false;}});
+   } else if (event < 1 && scrollEvent == false && count < 4){
+      
+      scrollEvent = true;
+      count++;
+      $("html,body").stop().animate({scrollTop:wHeight*count},
+         {duration:800, complete : function(){scrollEvent = false;}});
+   }
 });
