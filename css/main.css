@@ -25,7 +25,7 @@ box-sizing
 
 #header #yogiyoApp2 {position: absolute; right: 0; top: 100px;}
 
-#header #dot {position: fixed; right: 20px; top: 50%; transform: scaleY(-50%);}
+#header #dot {position: fixed; right: 0; top: 50%; transform: translateX(-50%)}
 #header #dot li a {display: block; margin: 8px; width: 20px; height: 20px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; transition: 0.3s ease;}
 #header #dot li.active a {transform: scale(0.5); box-shadow: 0 0 0 10px rgba(255,255,255,1);}
 
@@ -57,24 +57,26 @@ box-sizing
 #section1 .section1Title > img {position: absolute; left: 0; top: 200px;}
 #section1 .yogiyoApp > a {position: absolute; right: 0; bottom: 125px;}
 
-#section2 {background-color: #e12229;}
+#section2 {background: url(../images/bg1.png) center no-repeat; background-size: cover;}
 #section2 .section2Title > img {position: absolute; left: 0; top: 200px;}
 #section2 .section2Content {position: absolute; left: 0; top : 460px; text-align: left;}
 #section2 .section2Content > p {margin-bottom: 40px; font-size: 15px; font-weight: 200; color: #fff;}
 #section2 .section2Content2 > img {position: absolute; right: 35px; bottom: 90px; width: 480px; height: 385px;}
 
-#section3 {background-color: #e12229;}
+#section3 {background: url(../images/bg2.png) center no-repeat; background-size: cover;}
  /* #section3 {background: url(../images/page3img.png) center no-repeat fixed; background-size: cover;} */
 #section3 .section3Title > img {position: absolute; left: 0; top: 200px;}
 #section3 .section3Content {position: absolute; left: 0; top : 460px; text-align: left;}
 #section3 .section3Content > p {font-size: 15px; font-weight: 200; color: #fff;}
 
-#section4 {background-color: #e12229;}
+#section4 {background: url(../images/bg3.png) center no-repeat; background-size: cover;}
 #section4 .section4Title > img {position: absolute; left: 0; top: 200px;}
 #section4 .section4Content {position: absolute; left: 0; top : 540px; text-align: left;}
 #section4 .section4Content > p {font-size: 15px; font-weight: 200; color: #fff;}
 #section4 .section4Content2 {position: absolute; right: 0; bottom: 40px;}
 
+/*#section5 {background-color: #faca0c;}*/
+/*#section5 {background: url(../images/bg4.png) center no-repeat; background-size: cover;}*/
 #section5 .sns {position: absolute; left: 0; top: 200px;}
 #section5 .sns .facebook {margin-right: 20px;}
 #section5 .section5Content {position: absolute; left: 0; top: 300px; text-align: left;}
