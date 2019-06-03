@@ -58,24 +58,22 @@ $(document).ready(function(){
    });
 });
 
-/* 탑버튼 */
-$(document).ready(function(){
-   $(".topBtns").hide();
-   $(window).scroll(function() {
-      var wScroll = $(window).scrollTop();
-      if (wScroll >= (content.eq(4).offset().top)-(wScroll/4)){
-        $('.topBtns').fadeIn(500);
-      } else {
-        $('.topBtns').fadeOut(500);
-      }
-    });
-   $(".topBtns").click(function(e) {
-      e.preventDefault();
-      $('html,body').animate({
-        scrollTop : $(this.hash).offset().top
-      }, 700);
-    });
-});
+/* 배경 이미지 랜덤 */
+
+function backImg() {
+   var rnd = Math.random();
+   if (rnd <= 0.25) {
+      $(".backImg > img").attr("src", "images/mainimg1.png");
+   } else if (rnd > 0.25 && rnd <= 0.5) {
+      $(".backImg > img").attr("src", "images/mainimg2.png");
+   } else if (rnd > 0.5 && rnd <= 0.75) {
+      $(".backImg > img").attr("src", "images/mainimg3.png");
+   } else {
+      $(".backImg > img").attr("src", "images/mainimg4.png");
+   }
+}
+
+backImg();
 
 /* 마우스 휠 이벤트 */
 
