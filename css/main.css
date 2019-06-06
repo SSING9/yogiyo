@@ -51,7 +51,10 @@ box-sizing
 #fullpage #fullpageWrap {position: relative; left: 50%; transform: translateX(-50%); width: 1024px; height: 100vh;}
 
 /* 각 섹션 설정*/
-#section1 .backImg {position: absolute; width: 100%; height: 100%; overflow: hidden;}
+#section1 .backImg {width: 100vh; height: 100vh;}
+#section1 .backImg img {width: 100%; height: 100%; background-size: cover;}
+
+#section1 {background: url("../images/mainimg1.png") center no-repeat fixed; background-size: cover;}
 #section1 .section1Title > img {position: absolute; left: 0; top: 200px;}
 #section1 .yogiyoApp > a {position: absolute; right: 0; bottom: 125px;}
 
@@ -59,19 +62,20 @@ box-sizing
 #section2 .section2Title > img {position: absolute; left: 0; top: 200px;}
 #section2 .section2Content {position: absolute; left: 0; top : 460px; text-align: left;}
 #section2 .section2Content > p {margin-bottom: 40px; font-size: 15px; font-weight: 200; color: #fff;}
-#section2 .section2Content2 > img {position: absolute; right: 35px; bottom: 90px; width: 480px; height: 385px;}
+#section2 .section2Content2 > img {position: absolute; right: 0; bottom: 40px;}
 
 #section3 {background: url(../images/bg2.png) center no-repeat; background-size: 100% 100%;}
  /* #section3 {background: url(../images/page3img.png) center no-repeat fixed; background-size: cover;} */
 #section3 .section3Title > img {position: absolute; left: 0; top: 200px;}
 #section3 .section3Content {position: absolute; left: 0; top : 460px; text-align: left;}
 #section3 .section3Content > p {font-size: 15px; font-weight: 200; color: #fff;}
+#section3 .section3Content2 > img {position: absolute; right: 40px; bottom: 20px;}
 
 #section4 {background: url(../images/bg3.png) center no-repeat; background-size: 100% 100%;}
 #section4 .section4Title > img {position: absolute; left: 0; top: 200px;}
 #section4 .section4Content {position: absolute; left: 0; top : 540px; text-align: left;}
 #section4 .section4Content > p {font-size: 15px; font-weight: 200; color: #fff;}
-#section4 .section4Content2 {position: absolute; right: 0; bottom: 40px;}
+#section4 .section4Content2 {position: absolute; right: 50px; bottom: 80px;}
 
 /*#section5 {background-color: #faca0c;}*/
 /*#section5 {background: url(../images/bg4.png) center no-repeat; background-size: cover;}*/
