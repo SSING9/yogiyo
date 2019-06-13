@@ -90,20 +90,32 @@ box-sizing
 #section5 .section5Content2 .link3 {margin-top: 110px;}
 
 @media screen and (max-width:1024px){
-  #header .headerWrap {width: 100%;}
+  #header .headerWrap {width: 100%; height: auto;}
   #fullpage #fullpageWrap {width: 100%;}
   #section3 .section3Content2 > img {width: 300px; height: 519px;}
 }
 
 @media screen and (max-width:768px){
-  #section1, #section2, #section3, #section4 {background: #f0001f;}
-  #header .headerWrap {width: 100%;}
-  #header #yogiyoApp2 {position: absolute; top: 0; right: 0;}
+  #header .headerWrap {width: 100vw; height: auto;}
+  #fullpage #fullpageWrap {width: 100vw;}
   #header #sns > a {display: none;}
-  #section1 .section1Title > img {width: 90vw;}
+  #header #yogiyoApp2 a {display: none;}
+
   .section2Content2, .section3Content2, .section4Content2 {display: none;}
+  #section1, #section2, #section3, #section4 {background: #f0001f;}
+  #section2 .section2Title > img, #section3 .section3Title > img, #section4 .section4Title > img {position: absolute; top: 30%; width: 80vw;}
+  #section2 .section2Content, #section3 .section3Content > p, #section4 .section4Content > p {display: none;}
+  
+  #section1 .yogiyoApp > a {bottom: 0;}
+  #section1 .yogiyoApp img {width: 230px;}
+  #section1 .section1Title > img {width: 90vw;}
+
+  #section5 .sns, #section5 .section5Content, #section5 .section5Content2 {display: inline;}
+  #section5 .sns {top: 50px;}
+  #section5 .section5Content {top: 15vh;}
+  #section5 .section5Content2 {left: 20px; top: 50vh;}
 }
 
 @media screen and (max-width:320px){
-
+  #header #dot li a {display: none;}
 }
