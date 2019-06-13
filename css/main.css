@@ -89,6 +89,8 @@ box-sizing
 #section5 .section5Content2 .link2 {margin-top: 70px;}
 #section5 .section5Content2 .link3 {margin-top: 110px;}
 
+.hiddenApp {display: none; position: absolute; bottom: 20px; right: 0;}
+
 @media screen and (max-width:1024px){
   #header .headerWrap {width: 100%; height: auto;}
   #fullpage #fullpageWrap {width: 100%;}
@@ -106,14 +108,16 @@ box-sizing
   #section2 .section2Title > img, #section3 .section3Title > img, #section4 .section4Title > img {position: absolute; top: 30%; width: 80vw;}
   #section2 .section2Content, #section3 .section3Content > p, #section4 .section4Content > p {display: none;}
   
-  #section1 .yogiyoApp > a {bottom: 0;}
+  #section1 .yogiyoApp > a {position: fixed; bottom: 0;}
   #section1 .yogiyoApp img {width: 230px;}
   #section1 .section1Title > img {width: 90vw;}
 
-  #section5 .sns, #section5 .section5Content, #section5 .section5Content2 {display: inline;}
+  #section5 .sns, #section5 .section5Content, #section5 .section5Content2 {display: inline-block;}
   #section5 .sns {top: 50px;}
-  #section5 .section5Content {top: 15vh;}
-  #section5 .section5Content2 {left: 20px; top: 50vh;}
+  #section5 .section5Content {top: 20%;}
+  #section5 .section5Content2 {left: 20px; top: 55%;}
+
+  .hiddenApp {display: block;}
 }
 
 @media screen and (max-width:320px){
