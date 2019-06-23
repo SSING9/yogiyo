@@ -12,29 +12,58 @@ dot.click(function(e){
    $("html, body").animate({scrollTop : offset}, 800);
 });
 
-/* 닷 클릭시 닷 이미지 변경 */
+
 $(window).scroll(function(){
    var wScroll = $(this).scrollTop();
 
+   /* 닷 클릭시 닷 이미지 변경 */
+   var addDot = function(count, event){
+      dot.eq(count).addClass(event);
+   }
+   var removeDot = function(event){
+      dot.removeClass(event);
+   }
+
    if(wScroll >= content.eq(0).offset().top){
-      dot.removeClass("active");
-      dot.eq(0).addClass("active");
+      removeDot("active");
+      addDot(0, "active");
    }
    if(wScroll >= content.eq(1).offset().top){
-      dot.removeClass("active");
-      dot.eq(1).addClass("active");
+      removeDot("active");
+      addDot(1, "active");
    }
    if(wScroll >= content.eq(2).offset().top){
-      dot.removeClass("active");
-      dot.eq(2).addClass("active");
+      removeDot("active");
+      addDot(2, "active");
    }
    if(wScroll >= content.eq(3).offset().top){
-      dot.removeClass("active");
-      dot.eq(3).addClass("active");
+      removeDot("active");
+      addDot(3, "active");
    }
    if(wScroll >= content.eq(4).offset().top){
-      dot.removeClass("active");
-      dot.eq(4).addClass("active");
+      removeDot("active");
+      addDot(4, "active");
+   }
+
+   /* 페이지 효과 */
+   var addShow = function(count, event){
+      content.eq(count).addClass(event);
+   }
+   var removeShow = function(event){
+      content.removeClass(event);
+   } 
+
+   if(wScroll >= content.eq(1).offset().top){
+      removeShow("show");
+      addShow(1, "show");
+   }
+   if(wScroll >= content.eq(2).offset().top){
+      removeShow("show");
+      addShow(2, "show");
+   }
+   if(wScroll >= content.eq(3).offset().top){
+      removeShow("show");
+      addShow(3, "show");
    }
 });
 
@@ -79,21 +108,21 @@ $(document).ready(function(){
 /* 마우스 휠 이벤트 */
 var scrollEvent = false;
 var count = 0;
+
 $("html, body").on("mousewheel", function(e){
    e.preventDefault();
    var event = e.originalEvent.wheelDelta;
    var wHeight = $("#section1").height();
 
-   if(event > 1 && scrollEvent == false && count >=1 ){
+   if(event > 0 && scrollEvent == false && count >= 0 ){
       scrollEvent = true;
       count--;
-      $("html,body").stop().animate({scrollTop:wHeight*count},
+      $("html, body").stop().animate({scrollTop:wHeight*count},
          {duration:800, complete : function(){scrollEvent = false;}});
-   } else if (event < 1 && scrollEvent == false && count < 4){
+   } else if (event < 0 && scrollEvent == false && count <= 5){
       scrollEvent = true;
       count++;
-      $("html,body").stop().animate({scrollTop:wHeight*count},
+      $("html, body").stop().animate({scrollTop:wHeight*count},
          {duration:800, complete : function(){scrollEvent = false;}});
    }
 });
-

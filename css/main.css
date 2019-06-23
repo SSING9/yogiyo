@@ -1,17 +1,3 @@
-/*
-
-overflow
-display
-poition > z-index
-padding
-margin
-width, height
-background
-border
-font
-box-sizing
-
-*/
 
 /* 페이지 전체 고정 헤더 */
 #header {position: relative; width: 100vw; z-index: 1;}
@@ -22,6 +8,7 @@ box-sizing
 #header #sns .facebook {padding-right: 20px;}
 
 #header #yogiyoApp2 {position: absolute; right: 0; top: 100px;}
+#header #yogiyoApp2 .yogiyoApp2Small {display: none;}
 
 #header #dot {position: fixed; right: 0; top: 50%; transform: translateX(-50%)}
 #header #dot li a {display: block; margin: 8px; width: 20px; height: 20px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; transition: 0.3s ease;}
@@ -62,13 +49,13 @@ box-sizing
 #section2 .section2Title > img {position: absolute; left: 20px; top: 200px;}
 #section2 .section2Content {position: absolute; left: 20px; top : 460px; text-align: left;}
 #section2 .section2Content > p {margin-bottom: 40px; font-size: 15px; font-weight: 200; color: #fff;}
-#section2 .section2Content2 > img {position: absolute; right: 0; bottom: 40px;}
+#section2 .section2Content2 > img {position: absolute; right: 0; bottom: 0;}
 
 #section3 {background: url(../images/bg2.png) center no-repeat; background-size: 100% 100%;}
 #section3 .section3Title > img {position: absolute; left: 20px; top: 200px;}
 #section3 .section3Content {position: absolute; left: 20px; top : 460px; text-align: left;}
 #section3 .section3Content > p {font-size: 15px; font-weight: 200; color: #fff;}
-#section3 .section3Content2 > img {position: absolute; right: 40px; bottom: 20px;}
+#section3 .section3Content2 > img {position: absolute; right: 0; bottom: 10px;}
 
 #section4 {background: url(../images/bg3.png) center no-repeat; background-size: 100% 100%;}
 #section4 .section4Title > img {position: absolute; left: 20px; top: 200px;}
@@ -89,35 +76,49 @@ box-sizing
 #section5 .section5Content2 .link2 {margin-top: 70px;}
 #section5 .section5Content2 .link3 {margin-top: 110px;}
 
-.hiddenApp {display: none; position: absolute; bottom: 20px; right: 0;}
+
+/* 페이지 효과 */
+
+#section2 .section2Title img {opacity: 0; transform: translate(0,-40%); transition: all 1s ease-in-out;}
+#section2.show .section2Title img {transform: none; opacity: 1;}
+#section2 .section2Content p {opacity: 0; transform: translate(0,-40%); transition: all 1s ease-in-out;}
+#section2.show .section2Content p {transform: none; opacity: 1;}
+
+#section3 .section3Title img {opacity: 0; transform: translate(-20%,-20%); transition: all 0.5s ease-in-out;}
+#section3.show .section3Title img {transform: none; opacity: 1;}
+#section3 .section3Content p {opacity: 0; transform: translate(-20%,-20%); transition: all 0.5s ease-in-out;}
+#section3.show .section3Content p {transform: none; opacity: 1;}
+
+#section4 .section4Title img {opacity: 0; transform: translate(0,20%); transition: all 0.5s ease-in-out;}
+#section4.show .section4Title img {transform: none; opacity: 1;}
+#section4 .section4Content p {opacity: 0; transform: translate(0,20%); transition: all 0.5s ease-in-out;}
+#section4.show .section4Content p {transform: none; opacity: 1;}
+
+/* 반응형 */ 
 
 @media screen and (max-width:1024px){
   #header .headerWrap {width: 100%; height: auto;}
   #fullpage #fullpageWrap {width: 100%;}
-  #section3 .section3Content2 > img {width: 300px; height: 519px;}
 }
 
 @media screen and (max-width:768px){
-  #header .headerWrap {width: 100vw; height: auto;}
-  #fullpage #fullpageWrap {width: 100vw;}
+  #fullpage #fullpageWrap {width: 100vw; height: 100vh;}
   #header #sns > a {display: none;}
-  #header #yogiyoApp2 a {display: none;}
+  #header #yogiyoApp2 .yogiyoApp2Big {display: none;}
+  #header #yogiyoApp2 .yogiyoApp2Small {display: block;}
 
   .section2Content2, .section3Content2, .section4Content2 {display: none;}
   #section1, #section2, #section3, #section4 {background: #f0001f;}
-  #section2 .section2Title > img, #section3 .section3Title > img, #section4 .section4Title > img {position: absolute; top: 30%; width: 80vw;}
+
+  #section2 .section2Title, #section3 .section3Title, #section4 .section4Title {width: 100vw; height: 100vh;}
+  #section2 .section2Title > img, #section3 .section3Title > img, #section4 .section4Title > img {position: absolute; top: 40%; width: 70vw;}
   #section2 .section2Content, #section3 .section3Content > p, #section4 .section4Content > p {display: none;}
   
   #section1 .yogiyoApp > a {position: fixed; bottom: 0;}
   #section1 .yogiyoApp img {width: 230px;}
   #section1 .section1Title > img {width: 90vw;}
 
-  #section5 .sns, #section5 .section5Content, #section5 .section5Content2 {display: inline-block;}
-  #section5 .sns {top: 50px;}
-  #section5 .section5Content {top: 20%;}
-  #section5 .section5Content2 {left: 20px; top: 55%;}
-
-  .hiddenApp {display: block;}
+  #section5 .sns, #section5 .section5Content, #section5 .section5Content2 {display: block; position: static; float: left; padding: 30px;}
 }
 
 @media screen and (max-width:320px){
