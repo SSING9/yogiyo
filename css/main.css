@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 /* 페이지 전체 고정 헤더 */
 #header {position: relative; width: 100vw; z-index: 1;}
@@ -35,7 +36,7 @@
 
 /* 풀페이지 기본 설정 */
 #fullpage > .section {position: static; width: 100%; height: 100vh;}
-#fullpage #fullpageWrap {position: relative; left: 50%; transform: translateX(-50%); width: 1024px; height: 100vh;}
+#fullpage .fullpageWrap {position: relative; left: 50%; transform: translateX(-50%); width: 1024px; height: 100vh;}
 
 /* 각 섹션 설정*/
 #section1 .backImg {width: 100vh; height: 100vh;}
@@ -76,6 +77,9 @@
 #section5 .section5Content2 .link2 {margin-top: 70px;}
 #section5 .section5Content2 .link3 {margin-top: 110px;}
 
+.portfolio {width: 100%; background: #3a3a3a; text-align: center}
+.portfolio img {display: inline-block; padding: 20px; width: 10%;}
+
 
 /* 페이지 효과 */
 
@@ -98,11 +102,11 @@
 
 @media screen and (max-width:1024px){
   #header .headerWrap {width: 100%; height: auto;}
-  #fullpage #fullpageWrap {width: 100%;}
+  #fullpage .fullpageWrap {width: 100%;}
 }
 
 @media screen and (max-width:768px){
-  #fullpage #fullpageWrap {width: 100vw; height: 100vh;}
+  #fullpage .fullpageWrap {width: 100vw; height: 100vh;}
   #header #sns > a {display: none;}
   #header #yogiyoApp2 .yogiyoApp2Big {display: none;}
   #header #yogiyoApp2 .yogiyoApp2Small {display: block;}

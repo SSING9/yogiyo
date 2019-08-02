@@ -81,9 +81,9 @@ $(document).ready(function(){
       }
 
       if(wScroll >= (content.eq(4).offset().top)-(wScroll/7)){
-         $("h1, #sns").fadeOut(250);
+         $("h1, #sns, #scrolldown").fadeOut(250);
       } else{
-         $("h1, #sns").fadeIn(300);
+         $("h1, #sns, #scrolldown").fadeIn(300);
       }
    });
 
